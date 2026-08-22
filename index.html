@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IJIDI Foundation — An Instrument of Trust</title>
     <meta name="description" content="The civic gate of the IJIDI ecosystem. A charter, disclosed in the open. Phase I, Nigeria." />
+    <link rel="canonical" href="https://ijidi.org/" />
+    <meta name="theme-color" content="#173F35" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / social share preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IJIDI Foundation" />
+    <meta property="og:title" content="IJIDI Foundation — An Instrument of Trust" />
+    <meta property="og:description" content="The civic gate of the IJIDI ecosystem. A charter, disclosed in the open. Phase I, Nigeria." />
+    <meta property="og:url" content="https://ijidi.org/" />
+    <meta property="og:image" content="https://ijidi.org/assets/images/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ijidifoundation" />
+    <meta name="twitter:title" content="IJIDI Foundation — An Instrument of Trust" />
+    <meta name="twitter:description" content="The civic gate of the IJIDI ecosystem. A charter, disclosed in the open. Phase I, Nigeria." />
+    <meta name="twitter:image" content="https://ijidi.org/assets/images/og-cover.jpg" />
+
+    <!-- Favicon set — see asset instructions -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+
+    <!-- Structured data — helps Google recognize this as a real nonprofit entity -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "IJIDI Foundation",
+        "url": "https://ijidi.org",
+        "sameAs": [
+            "https://facebook.com/ijidifoundation",
+            "https://tiktok.com/@ijidifoundation",
+            "https://x.com/ijidifoundation",
+            "https://instagram.com/ijidifoundation",
+            "https://threads.net/@ijidifoundation",
+            "https://discord.gg/ijidifoundation",
+            "https://pinterest.com/ijidifoundation",
+            "https://linkedin.com/company/ijidifoundation"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Mandela Onwusah",
+            "url": "https://mandelaonwusah.com"
+        },
+        "description": "The civic gate of the IJIDI ecosystem — a charter disclosed in the open, Phase I, Nigeria."
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
@@ -197,6 +245,22 @@
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             border: 0;
+        }
+        .skip-link {
+            position: absolute;
+            top: -60px;
+            left: 12px;
+            z-index: 300;
+            background: var(--gold);
+            color: var(--ink);
+            padding: 10px 18px;
+            border-radius: var(--radius);
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus {
+            top: 12px;
         }
 
         /* ============================================================
@@ -1338,6 +1402,7 @@
         .foot-social {
             display: flex;
             gap: 12px;
+            flex-wrap: wrap;
         }
         .foot-social a {
             width: 36px;
@@ -1411,10 +1476,24 @@
             fill: #fff;
         }
         .float-whatsapp {
-            background: #25D366;
+            background: var(--forest);
+            border: 1px solid var(--forest-light);
+        }
+        .float-whatsapp:hover {
+            background: var(--forest-light);
+        }
+        .float-whatsapp svg {
+            fill: var(--ivory);
         }
         .float-telegram {
-            background: #229ED9;
+            background: var(--gold);
+            border: 1px solid var(--gold-light);
+        }
+        .float-telegram:hover {
+            background: var(--gold-light);
+        }
+        .float-telegram svg {
+            fill: var(--ink);
         }
         @media (max-width: 600px) {
             .float-contact {
@@ -1493,6 +1572,8 @@
     </style>
 </head>
 <body>
+
+    <a href="#about" class="skip-link">Skip to main content</a>
 
     <!-- ============================================================
     HEADER
@@ -1584,7 +1665,7 @@
             </div>
             <div class="mission-grid">
                 <div class="mission-statement reveal">
-                    “We are not here to save. We are here to <strong>amplify</strong> — to clear paths, share tools, and stand beside those who already hold the answers.”
+                    "We are not here to save. We are here to <strong>amplify</strong> — to clear paths, share tools, and stand beside those who already hold the answers."
                 </div>
                 <div class="mission-facts">
                     <div class="mission-fact reveal">
@@ -1830,21 +1911,23 @@
             </div>
             <div class="gov-grid">
                 <div class="gov-card" role="button" tabindex="0">
-                    <div class="avatar">MO</div>
+                    <img class="avatar" src="/assets/images/mandela-onwusah.jpg" alt="Mandela Onwusah" loading="lazy" width="48" height="48" style="object-fit:cover;font-size:0;" onerror="this.onerror=null;this.removeAttribute('src');this.style.fontSize='1.2rem';this.textContent='MO';" />
                     <h3>Mandela Onwusah</h3>
                     <div class="role">Founder &amp; Director</div>
                     <p>Mandela brings two decades of experience across development, policy, and social innovation.</p>
                     <div class="expand-bio">
                         <p>He founded the IJIDI ecosystem to create a new kind of institutional architecture — one rooted in trust, transparency, and African agency. He is the author of several frameworks on civic infrastructure and participatory governance.</p>
+                        <p style="margin-top:10px;border-top:none;padding-top:0;"><a href="https://mandelaonwusah.com" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light);">mandelaonwusah.com →</a></p>
                     </div>
                 </div>
                 <div class="gov-card" role="button" tabindex="0">
-                    <div class="avatar">IP</div>
+                    <img class="avatar" src="/assets/images/ifeoma-peace-david.jpg" alt="Ifeoma Peace David" loading="lazy" width="48" height="48" style="object-fit:cover;font-size:0;" onerror="this.onerror=null;this.removeAttribute('src');this.style.fontSize='1.2rem';this.textContent='IP';" />
                     <h3>Ifeoma Peace David</h3>
                     <div class="role">Trustee</div>
                     <p>Ifeoma is a seasoned legal and policy advisor with deep expertise in human rights and institutional governance.</p>
                     <div class="expand-bio">
                         <p>She has advised governments and civil society organisations on constitutional reform, access to justice, and institutional accountability. She is committed to ensuring the foundation operates with integrity and transparency.</p>
+                        <p class="placeholder-text" style="margin-top:10px;border-top:none;padding-top:0;">Personal site — coming soon</p>
                     </div>
                 </div>
                 <div class="gov-card" role="button" tabindex="0">
@@ -2015,7 +2098,7 @@
                     <ul>
                         <li><a href="#get-involved">Get Involved</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#" onclick="event.preventDefault();alert('We’re building our governance section. Please check back.')">Governance</a></li>
+                        <li><a href="#" onclick="event.preventDefault();alert('We are building our governance section. Please check back.')">Governance</a></li>
                         <li><a href="#" onclick="event.preventDefault();alert('Our privacy policy is under development.')">Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -2023,17 +2106,33 @@
                     <h4>Stay in touch</h4>
                     <ul>
                         <li><a href="mailto:foundation@ijidi.org" style="color:var(--gold-light);">foundation@ijidi.org</a></li>
+                        <li><a href="mailto:ijidifoundation@gmail.com" style="color:var(--gold-light);">ijidifoundation@gmail.com</a></li>
                         <li style="color:var(--ivory-dim);font-size:0.82rem;">© 2026 IJIDI Foundation</li>
                     </ul>
                     <div class="foot-social" style="margin-top:12px;">
-                        <a href="#" aria-label="X / Twitter" onclick="event.preventDefault();">
+                        <a href="https://facebook.com/ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                        <a href="https://tiktok.com/@ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <a href="https://x.com/ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
                             <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
-                        <a href="#" aria-label="LinkedIn" onclick="event.preventDefault();">
-                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Instagram" onclick="event.preventDefault();">
+                        <a href="https://instagram.com/ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://threads.net/@ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+                            <svg viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.878-6.43 2.523-8.481C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.317-6.015-2.906.02-5.104.94-6.534 2.734-1.338 1.677-2.03 4.093-2.058 7.18.028 3.086.72 5.502 2.058 7.179 1.43 1.795 3.628 2.714 6.534 2.734 2.616-.018 4.35-.653 5.803-2.127 1.66-1.682 1.632-3.744 1.101-4.98-.31-.723-.874-1.324-1.634-1.767-.192 1.372-.62 2.467-1.276 3.264-.877 1.065-2.126 1.645-3.716 1.673-1.207.02-2.373-.275-3.28-.936-1.07-.78-1.687-1.965-1.737-3.339-.098-2.7 2.007-4.64 5.121-4.72.985-.025 1.907.048 2.752.216-.113-.687-.34-1.234-.68-1.63-.462-.54-1.176-.816-2.122-.822h-.026c-.762 0-1.784.211-2.44 1.214l-1.75-1.191c.882-1.34 2.35-2.078 4.135-2.09h.038c2.968.02 4.735 1.83 4.909 5.001.1.018.199.038.297.06 1.383.311 2.487 1.001 3.194 1.996.994 1.399 1.148 3.664-.717 5.55-1.85 1.87-4.153 2.72-7.487 2.746zm.795-9.845c-.144-.003-.29-.005-.44-.003-1.89.05-3.083.94-3.032 2.253.05 1.36 1.297 1.955 2.474 1.93 1.147-.024 2.564-.483 2.851-3.153a10.6 10.6 0 00-.001-.897 8.35 8.35 0 00-1.852-.13z"/></svg>
+                        </a>
+                        <a href="https://discord.gg/ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                            <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.076.076 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+                        </a>
+                        <a href="https://pinterest.com/ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.995-.285 1.202.6 2.181 1.798 2.181 2.152 0 3.719-2.652 3.719-6.373 0-2.647-1.881-4.494-4.582-4.494-3.121 0-4.955 2.34-4.955 4.757 0 .943.363 1.951.813 2.501a.322.322 0 01.076.317c-.083.34-.264 1.06-.301 1.204-.047.196-.153.238-.354.144-1.324-.616-2.152-2.551-2.152-4.109 0-3.339 2.428-6.408 7.001-6.408 3.674 0 6.531 2.618 6.531 6.117 0 3.649-2.301 6.586-5.494 6.586-1.073 0-2.083-.557-2.428-1.217l-.66 2.517c-.239.921-.885 2.073-1.318 2.777 1 .309 2.061.475 3.16.475 6.607 0 11.985-5.365 11.985-11.987C23.97 5.365 18.592.001 11.985.001z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/company/ijidifoundation" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
                     </div>
                 </div>
